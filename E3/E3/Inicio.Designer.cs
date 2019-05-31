@@ -46,9 +46,9 @@
             "8",
             "9",
             "10"});
-            this.comboBox1.Location = new System.Drawing.Point(171, 150);
+            this.comboBox1.Location = new System.Drawing.Point(405, 360);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.Size = new System.Drawing.Size(172, 28);
             this.comboBox1.TabIndex = 0;
             // 
             // comboBox2
@@ -61,16 +61,16 @@
             "8",
             "9",
             "10"});
-            this.comboBox2.Location = new System.Drawing.Point(363, 150);
+            this.comboBox2.Location = new System.Drawing.Point(657, 360);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
+            this.comboBox2.Size = new System.Drawing.Size(172, 28);
             this.comboBox2.TabIndex = 1;
             // 
             // boton_iniciar
             // 
-            this.boton_iniciar.Location = new System.Drawing.Point(171, 214);
+            this.boton_iniciar.Location = new System.Drawing.Point(379, 474);
             this.boton_iniciar.Name = "boton_iniciar";
-            this.boton_iniciar.Size = new System.Drawing.Size(142, 66);
+            this.boton_iniciar.Size = new System.Drawing.Size(188, 78);
             this.boton_iniciar.TabIndex = 2;
             this.boton_iniciar.Text = "Iniciar";
             this.boton_iniciar.UseVisualStyleBackColor = true;
@@ -78,9 +78,9 @@
             // 
             // boton_salir
             // 
-            this.boton_salir.Location = new System.Drawing.Point(363, 214);
+            this.boton_salir.Location = new System.Drawing.Point(673, 474);
             this.boton_salir.Name = "boton_salir";
-            this.boton_salir.Size = new System.Drawing.Size(145, 66);
+            this.boton_salir.Size = new System.Drawing.Size(188, 78);
             this.boton_salir.TabIndex = 3;
             this.boton_salir.Text = "Salir";
             this.boton_salir.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(176, 87);
+            this.label1.Location = new System.Drawing.Point(412, 301);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 20);
             this.label1.TabIndex = 4;
@@ -98,17 +98,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(359, 87);
+            this.label2.Location = new System.Drawing.Point(642, 301);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Ingrese Ancho (Columnas)";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::E3.Properties.Resources.fotoinicio;
+            this.ClientSize = new System.Drawing.Size(1238, 706);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.boton_salir);
