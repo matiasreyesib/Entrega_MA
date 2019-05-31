@@ -89,6 +89,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -102,6 +103,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotowetar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotowetar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pelea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotoagua.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotodesierto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotodorvalo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotodorvalo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotodorvalo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotodoti.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotodoti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotoent.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotoent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotogofue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotoinicio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotolava.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotonieve.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fototaplan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fototierra.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,7 +12,7 @@ namespace E3
 {
     public partial class Inicio : Form
     {
-       // public int FILA;
+        // public int FILA;
         //public int COLUMNA;
 
         public Inicio()
@@ -22,16 +22,19 @@ namespace E3
 
         private void boton_iniciar_Click(object sender, EventArgs e)
         {
-            ComboBox comboBox1 = new ComboBox();
-            ComboBox comboBox2 = new ComboBox();
-            if (comboBox1.SelectedIndex != null && comboBox2.SelectedIndex != null)
+            if (comboBox1 != null && comboBox2 != null)
             {
                 Form1 Form1 = new Form1();
-                Form1.FILA = Convert.ToInt32(comboBox1.SelectedItem);
-                Form1.COLUMNA = Convert.ToInt32(comboBox2.SelectedItem);
                 Form1.Show();
+                this.Hide();
 
             }
         }
+
+        private void boton_salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        
     }
 }

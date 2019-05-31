@@ -46,7 +46,7 @@
             "8",
             "9",
             "10"});
-            this.comboBox1.Location = new System.Drawing.Point(171, 133);
+            this.comboBox1.Location = new System.Drawing.Point(171, 150);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 0;
@@ -61,7 +61,7 @@
             "8",
             "9",
             "10"});
-            this.comboBox2.Location = new System.Drawing.Point(349, 133);
+            this.comboBox2.Location = new System.Drawing.Point(363, 150);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 28);
             this.comboBox2.TabIndex = 1;
@@ -84,6 +84,7 @@
             this.boton_salir.TabIndex = 3;
             this.boton_salir.Text = "Salir";
             this.boton_salir.UseVisualStyleBackColor = true;
+            this.boton_salir.Click += new System.EventHandler(this.boton_salir_Click);
             // 
             // label1
             // 
