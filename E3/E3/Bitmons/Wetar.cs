@@ -108,14 +108,14 @@ namespace E3
             return posy;
         }
 
-        public override void Moverse()
+        public override void Moverse(Mapa mapa)
         {
             int x = posx;
             int y = posy;
             int mx = Moverse_Fila();
             int my = Moverse_Columna();
 
-            if (mx > 0 && mx < 8 & my > 0 && my < 8)
+            if (mx > 0 && mx < mapa.filas_mapa & my > 0 && my < mapa.columnas_mapa)
             {
                 posx = mx;
                 posy = my;
@@ -127,34 +127,34 @@ namespace E3
                     posx += 1;
                     posy += 1;
                 }
-                else if (x == 7 && y == 0)
+                else if (x == mapa.filas_mapa-1 && y == 0)
                 {
                     posx -= 1;
                     posy += 1;
                 }
-                else if (x == 0 && y == 7)
+                else if (x == 0 && y == mapa.columnas_mapa-1)
                 {
                     posx += 1;
                     posy -= 1;
                 }
-                else if (x == 7 && y == 7)
+                else if (x == mapa.filas_mapa-1 && y == mapa.columnas_mapa-1)
                 {
                     posx -= 1;
                     posy -= 1;
                 }
-                else if (x == 0 && y != 0 && y != 7)
+                else if (x == 0 && y != 0 && y != mapa.columnas_mapa-1)
                 {
                     posx += 1;
                 }
-                else if (x == 7 && y != 0 && y != 7)
+                else if (x == mapa.filas_mapa-1 && y != 0 && y != mapa.columnas_mapa-1)
                 {
                     posx -= 1;
                 }
-                else if (y == 0 && x != 0 && x != 7)
+                else if (y == 0 && x != 0 && x != mapa.filas_mapa-1)
                 {
                     posy += 1;
                 }
-                else if (y == 7 && x != 0 && x != 7)
+                else if (y == mapa.columnas_mapa-1 && x != 0 && x != mapa.filas_mapa-1)
                 {
                     posy -= 1;
                 }

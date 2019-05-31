@@ -15,8 +15,10 @@ namespace E3
     {
         List<Button> listaBotones;
         Button[,] matrizBotones;
-        Mapa mapa = new Mapa(8, 8);
-        int nada = 0;
+        public static int FILA;
+        public static int COLUMNA;
+        Mapa mapa = new Mapa(8,8);
+        public int nada = 0;
 
         FileStream fotowetar = new FileStream("C:/Users/matia/Desktop/Proyecto_Final/Imagenes/fotowetar.png", FileMode.Open);
         FileStream fotodorvalo = new FileStream("C:/Users/matia/Desktop/Proyecto_Final/Imagenes/fotodorvalo.png", FileMode.Open);
@@ -271,7 +273,7 @@ namespace E3
                         /// Aca el movimiento del wetar queda resringido solamente a a las celdas contiguas que tienen agua
                         if (mapa.mapa[fila, columna].bitmons_celda[0].Get_Especie() == "wetar")
                         {
-                            mapa.mapa[fila, columna].bitmons_celda[0].Moverse();
+                            mapa.mapa[fila, columna].bitmons_celda[0].Moverse(mapa);
                             int posx_sig = mapa.mapa[fila, columna].bitmons_celda[0].Get_Posx();
                             int posy_sig = mapa.mapa[fila, columna].bitmons_celda[0].Get_Posy();
 
@@ -291,7 +293,7 @@ namespace E3
                                 }
 
                                 mapa.mapa[fila, columna].bitmons_celda.RemoveAt(0);
-                                Borrador_Bitmons_Celda[0].Moverse();
+                                Borrador_Bitmons_Celda[0].Moverse(mapa);
                                 int posx = Borrador_Bitmons_Celda[0].Get_Posx();
                                 int posy = Borrador_Bitmons_Celda[0].Get_Posy();
                                 mapa.mapa[posx, posy].AgregarBitmon(Borrador_Bitmons_Celda[0]);
@@ -343,7 +345,7 @@ namespace E3
                                 nada += 0;
                             }
                             mapa.mapa[fila, columna].bitmons_celda.RemoveAt(0);
-                            Borrador_Bitmons_Celda[0].Moverse();
+                            Borrador_Bitmons_Celda[0].Moverse(mapa);
                             int posx = Borrador_Bitmons_Celda[0].Get_Posx();
                             int posy = Borrador_Bitmons_Celda[0].Get_Posy();
                             mapa.mapa[posx, posy].AgregarBitmon(Borrador_Bitmons_Celda[0]);
@@ -390,7 +392,7 @@ namespace E3
                                 nada += 0;
                             }
                             mapa.mapa[fila, columna].bitmons_celda.RemoveAt(0);
-                            Borrador_Bitmons_Celda[0].Moverse();
+                            Borrador_Bitmons_Celda[0].Moverse(mapa);
                             int posx = Borrador_Bitmons_Celda[0].Get_Posx();
                             int posy = Borrador_Bitmons_Celda[0].Get_Posy();
                             mapa.mapa[posx, posy].AgregarBitmon(Borrador_Bitmons_Celda[0]);
@@ -408,7 +410,7 @@ namespace E3
                             matrizBotones[fila, columna].BackgroundImage = null;
                             // Como los Ents no son capaces de moverse, no nos preocupamos de hacer lo hicimos antes
                             mapa.mapa[fila, columna].bitmons_celda.RemoveAt(0);
-                            Borrador_Bitmons_Celda[0].Moverse();
+                            Borrador_Bitmons_Celda[0].Moverse(mapa);
                             int posx = Borrador_Bitmons_Celda[0].Get_Posx();
                             int posy = Borrador_Bitmons_Celda[0].Get_Posy();
                             mapa.mapa[posx, posy].AgregarBitmon(Borrador_Bitmons_Celda[0]);
@@ -460,7 +462,7 @@ namespace E3
                                 nada += 0;
                             }
                             mapa.mapa[fila, columna].bitmons_celda.RemoveAt(0);
-                            Borrador_Bitmons_Celda[0].Moverse();
+                            Borrador_Bitmons_Celda[0].Moverse(mapa);
                             int posx = Borrador_Bitmons_Celda[0].Get_Posx();
                             int posy = Borrador_Bitmons_Celda[0].Get_Posy();
                             mapa.mapa[posx, posy].AgregarBitmon(Borrador_Bitmons_Celda[0]);
@@ -510,7 +512,7 @@ namespace E3
                                 nada += 0;
                             }
                             mapa.mapa[fila, columna].bitmons_celda.RemoveAt(0);
-                            Borrador_Bitmons_Celda[0].Moverse();
+                            Borrador_Bitmons_Celda[0].Moverse(mapa);
                             int posx = Borrador_Bitmons_Celda[0].Get_Posx();
                             int posy = Borrador_Bitmons_Celda[0].Get_Posy();
                             mapa.mapa[posx, posy].AgregarBitmon(Borrador_Bitmons_Celda[0]);

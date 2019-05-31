@@ -51,7 +51,7 @@ namespace E3
             puntosDeVida -= ataque;
         }
         // La afinidad que tiene con el terreno
-        public abstract void Moverse();
+        public abstract void Moverse(Mapa mapa);
 
     }
 }

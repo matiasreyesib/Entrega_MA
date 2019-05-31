@@ -115,7 +115,7 @@ namespace E3
 
         // Metodo que utilizamos para el movimiento del Bitmon, en este caso vacio,
         // puesto que no se puede mover.
-        public override void Moverse()
+        public override void Moverse(Mapa mapa)
         {
 
         }
