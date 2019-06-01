@@ -142,7 +142,7 @@ namespace E3
                         }
                         else
                         {
-                            button.Text = "mas u";
+                            celda.bitmons_celda.RemoveAt(0);
                         }
                     }
                 }
@@ -427,6 +427,16 @@ namespace E3
                             nada += 0;
                         }
                     }
+                    if (mapa.mapa[fila, columna].bitmons_celda.Count > 1 && mapa.mapa[fila, columna].bitmons_celda.Count < 2)
+                    {
+                        mapa.mapa[fila, columna].bitmons_celda.RemoveAt(0);
+                    }
+                    if (mapa.mapa[fila, columna].bitmons_celda.Count > 2)
+                    {
+                        mapa.mapa[fila, columna].bitmons_celda.RemoveAt(0);
+                        mapa.mapa[fila, columna].bitmons_celda.RemoveAt(1);
+                        mapa.CrearBitmon();
+                    }
 
                     //////////
                     //////////
@@ -434,7 +444,7 @@ namespace E3
                     /////////
                     //////
                     ///
-                    //
+                        //
 
 
                     else if (mapa.mapa[fila, columna].bitmons_celda.Count > 1)
@@ -462,11 +472,7 @@ namespace E3
         {
             Application.Restart();
         }
-
-        private void boton_mostrar_bitmons_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Disponible en la proxima actualizacion!!");
-        }
+        
 
         private void boton_salir_Click(object sender, EventArgs e)
         {

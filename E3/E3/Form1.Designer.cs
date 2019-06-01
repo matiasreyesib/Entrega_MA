@@ -33,7 +33,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.boton_reiniciar = new System.Windows.Forms.Button();
             this.boton_salir = new System.Windows.Forms.Button();
-            this.boton_mostrar_bitmons = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -99,7 +98,7 @@
             // 
             // boton_reiniciar
             // 
-            this.boton_reiniciar.Location = new System.Drawing.Point(31, 577);
+            this.boton_reiniciar.Location = new System.Drawing.Point(139, 562);
             this.boton_reiniciar.Name = "boton_reiniciar";
             this.boton_reiniciar.Size = new System.Drawing.Size(167, 81);
             this.boton_reiniciar.TabIndex = 1;
@@ -109,23 +108,13 @@
             // 
             // boton_salir
             // 
-            this.boton_salir.Location = new System.Drawing.Point(533, 577);
+            this.boton_salir.Location = new System.Drawing.Point(436, 562);
             this.boton_salir.Name = "boton_salir";
             this.boton_salir.Size = new System.Drawing.Size(167, 81);
             this.boton_salir.TabIndex = 2;
             this.boton_salir.Text = "Salir";
             this.boton_salir.UseVisualStyleBackColor = true;
             this.boton_salir.Click += new System.EventHandler(this.boton_salir_Click);
-            // 
-            // boton_mostrar_bitmons
-            // 
-            this.boton_mostrar_bitmons.Location = new System.Drawing.Point(273, 577);
-            this.boton_mostrar_bitmons.Name = "boton_mostrar_bitmons";
-            this.boton_mostrar_bitmons.Size = new System.Drawing.Size(167, 81);
-            this.boton_mostrar_bitmons.TabIndex = 3;
-            this.boton_mostrar_bitmons.Text = "Mostrar Bitmons";
-            this.boton_mostrar_bitmons.UseVisualStyleBackColor = true;
-            this.boton_mostrar_bitmons.Click += new System.EventHandler(this.boton_mostrar_bitmons_Click);
             // 
             // pictureBox1
             // 
@@ -372,7 +361,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1715, 816);
+            this.ClientSize = new System.Drawing.Size(1153, 816);
             this.Controls.Add(this.cant_ent);
             this.Controls.Add(this.cant_doti);
             this.Controls.Add(this.cant_dorvalo);
@@ -397,7 +386,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.boton_mostrar_bitmons);
             this.Controls.Add(this.boton_salir);
             this.Controls.Add(this.boton_reiniciar);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -420,7 +408,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button boton_reiniciar;
         private System.Windows.Forms.Button boton_salir;
-        private System.Windows.Forms.Button boton_mostrar_bitmons;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
