@@ -57,6 +57,7 @@
             this.cant_dorvalo = new System.Windows.Forms.Label();
             this.cant_doti = new System.Windows.Forms.Label();
             this.cant_ent = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -98,7 +99,7 @@
             // 
             // boton_reiniciar
             // 
-            this.boton_reiniciar.Location = new System.Drawing.Point(139, 562);
+            this.boton_reiniciar.Location = new System.Drawing.Point(329, 562);
             this.boton_reiniciar.Name = "boton_reiniciar";
             this.boton_reiniciar.Size = new System.Drawing.Size(167, 81);
             this.boton_reiniciar.TabIndex = 1;
@@ -108,7 +109,7 @@
             // 
             // boton_salir
             // 
-            this.boton_salir.Location = new System.Drawing.Point(436, 562);
+            this.boton_salir.Location = new System.Drawing.Point(593, 562);
             this.boton_salir.Name = "boton_salir";
             this.boton_salir.Size = new System.Drawing.Size(167, 81);
             this.boton_salir.TabIndex = 2;
@@ -302,9 +303,8 @@
             this.cant_taplan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cant_taplan.Location = new System.Drawing.Point(950, 96);
             this.cant_taplan.Name = "cant_taplan";
-            this.cant_taplan.Size = new System.Drawing.Size(81, 20);
+            this.cant_taplan.Size = new System.Drawing.Size(0, 20);
             this.cant_taplan.TabIndex = 22;
-            this.cant_taplan.Text = "Cantidad :";
             // 
             // cant_wetar
             // 
@@ -312,9 +312,8 @@
             this.cant_wetar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cant_wetar.Location = new System.Drawing.Point(950, 207);
             this.cant_wetar.Name = "cant_wetar";
-            this.cant_wetar.Size = new System.Drawing.Size(81, 20);
+            this.cant_wetar.Size = new System.Drawing.Size(0, 20);
             this.cant_wetar.TabIndex = 23;
-            this.cant_wetar.Text = "Cantidad :";
             // 
             // cant_gofue
             // 
@@ -322,9 +321,8 @@
             this.cant_gofue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cant_gofue.Location = new System.Drawing.Point(950, 313);
             this.cant_gofue.Name = "cant_gofue";
-            this.cant_gofue.Size = new System.Drawing.Size(81, 20);
+            this.cant_gofue.Size = new System.Drawing.Size(0, 20);
             this.cant_gofue.TabIndex = 24;
-            this.cant_gofue.Text = "Cantidad :";
             // 
             // cant_dorvalo
             // 
@@ -332,9 +330,8 @@
             this.cant_dorvalo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cant_dorvalo.Location = new System.Drawing.Point(950, 418);
             this.cant_dorvalo.Name = "cant_dorvalo";
-            this.cant_dorvalo.Size = new System.Drawing.Size(81, 20);
+            this.cant_dorvalo.Size = new System.Drawing.Size(0, 20);
             this.cant_dorvalo.TabIndex = 25;
-            this.cant_dorvalo.Text = "Cantidad :";
             // 
             // cant_doti
             // 
@@ -342,9 +339,8 @@
             this.cant_doti.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cant_doti.Location = new System.Drawing.Point(950, 532);
             this.cant_doti.Name = "cant_doti";
-            this.cant_doti.Size = new System.Drawing.Size(81, 20);
+            this.cant_doti.Size = new System.Drawing.Size(0, 20);
             this.cant_doti.TabIndex = 26;
-            this.cant_doti.Text = "Cantidad :";
             // 
             // cant_ent
             // 
@@ -352,9 +348,18 @@
             this.cant_ent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cant_ent.Location = new System.Drawing.Point(950, 638);
             this.cant_ent.Name = "cant_ent";
-            this.cant_ent.Size = new System.Drawing.Size(81, 20);
+            this.cant_ent.Size = new System.Drawing.Size(0, 20);
             this.cant_ent.TabIndex = 27;
-            this.cant_ent.Text = "Cantidad :";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(30, 562);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(212, 81);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Comenzar Simulacion";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -362,6 +367,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1153, 816);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cant_ent);
             this.Controls.Add(this.cant_doti);
             this.Controls.Add(this.cant_dorvalo);
@@ -432,6 +438,7 @@
         private System.Windows.Forms.Label cant_dorvalo;
         private System.Windows.Forms.Label cant_doti;
         private System.Windows.Forms.Label cant_ent;
+        private System.Windows.Forms.Button button1;
     }
 }
 

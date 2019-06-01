@@ -43,9 +43,7 @@
             "5",
             "6",
             "7",
-            "8",
-            "9",
-            "10"});
+            "8"});
             this.comboBox1.Location = new System.Drawing.Point(405, 360);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(172, 28);
@@ -58,9 +56,7 @@
             "5",
             "6",
             "7",
-            "8",
-            "9",
-            "10"});
+            "8"});
             this.comboBox2.Location = new System.Drawing.Point(657, 360);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(172, 28);

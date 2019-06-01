@@ -24,7 +24,9 @@ namespace E3
         {
             if (comboBox1 != null && comboBox2 != null)
             {
-                Form1 Form1 = new Form1();
+                Form1 Form1 = new Form1(Convert.ToInt32(comboBox1.SelectedItem), Convert.ToInt32(comboBox2.SelectedItem));
+                Form1.Fila = Convert.ToInt32(comboBox1.SelectedItem);
+                Form1.Columna = Convert.ToInt32(comboBox2.SelectedItem);
                 Form1.Show();
                 this.Hide();
 
