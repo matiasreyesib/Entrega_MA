@@ -18,13 +18,15 @@ namespace E3
         public static int Fila;
         public static int Columna;
         public int nada = 0;
+        public static int meses;
         int contador = 0;
 
-        public Form1(int Fila1, int Columna1)
+        public Form1(int Fila1, int Columna1, int meses1)
         {
             Mapa mapa = new Mapa(Fila1, Columna1);
             Fila = Fila1;
             Columna = Columna1;
+            meses = meses1;
             
             InitializeComponent();
             tableLayoutPanel1.Hide();
@@ -92,12 +94,8 @@ namespace E3
         private void button1_Click(object sender, EventArgs e)
         {
             Mapa mapa = new Mapa(Fila, Columna);
-            cant_wetar.Text = Convert.ToString(mapa.n_wetar);
-            cant_gofue.Text = Convert.ToString(mapa.n_gofue);
-            cant_dorvalo.Text = Convert.ToString(mapa.n_dorvalo);
-            cant_doti.Text = Convert.ToString(mapa.n_doti);
-            cant_ent.Text = Convert.ToString(mapa.n_ent);
-            for (int i = 0; i < 5; i++)
+
+            for (int i = 0; i < meses; i++)
             {
                 contador++;
 
@@ -113,12 +111,10 @@ namespace E3
                         Terreno terreno = celda.tipo_terreno;
                         cant_taplan.Text = Convert.ToString(mapa.n_taplan);
 
-
-
                         // Terrenos en el mapa
                         if (terreno.Get_Terreno() == "acuatico")
                         {
-                            matrizBotones[fila,columna].BackColor = Color.Blue;
+                            matrizBotones[fila, columna].BackColor = Color.Blue;
                             matrizBotones[fila, columna].BackgroundImage = Properties.Resources.fotoagua;
                             matrizBotones[fila, columna].BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 
@@ -199,10 +195,66 @@ namespace E3
                         {
                             if ((celda.bitmons_celda[0].Get_Especie() == "wetar" && celda.bitmons_celda[1].Get_Especie() == "dorvalo"))
                             {
+                                if (celda.bitmons_celda[0].Get_Especie() == "taplan")
+                                {
+                                    mapa.n_taplan -= 1;
+                                }
+                                else if (celda.bitmons_celda[0].Get_Especie() == "wetar")
+                                {
+                                    mapa.n_wetar -= 1;
+                                }
+                                else if (celda.bitmons_celda[0].Get_Especie() == "gofue")
+                                {
+                                    mapa.n_gofue -= 1;
+                                }
+                                else if (celda.bitmons_celda[0].Get_Especie() == "dorvalo")
+                                {
+                                    mapa.n_dorvalo -= 1;
+                                }
+                                else if (celda.bitmons_celda[0].Get_Especie() == "doti")
+                                {
+                                    mapa.n_doti -= 1;
+                                }
+                                else if (celda.bitmons_celda[0].Get_Especie() == "ent")
+                                {
+                                    mapa.n_ent -= 1;
+                                }
+                                else
+                                {
+                                    nada += 0;
+                                }
                                 celda.bitmons_celda.RemoveAt(0);
                             }
                             else if ((mapa.mapa[fila, columna].bitmons_celda[0].Get_Especie() == "dorvalo" && mapa.mapa[fila, columna].bitmons_celda[1].Get_Especie() == "wetar"))
                             {
+                                if (celda.bitmons_celda[1].Get_Especie() == "taplan")
+                                {
+                                    mapa.n_taplan -= 1;
+                                }
+                                else if (celda.bitmons_celda[1].Get_Especie() == "wetar")
+                                {
+                                    mapa.n_wetar -= 1;
+                                }
+                                else if (celda.bitmons_celda[1].Get_Especie() == "gofue")
+                                {
+                                    mapa.n_gofue -= 1;
+                                }
+                                else if (celda.bitmons_celda[1].Get_Especie() == "dorvalo")
+                                {
+                                    mapa.n_dorvalo -= 1;
+                                }
+                                else if (celda.bitmons_celda[1].Get_Especie() == "doti")
+                                {
+                                    mapa.n_doti -= 1;
+                                }
+                                else if (celda.bitmons_celda[1].Get_Especie() == "ent")
+                                {
+                                    mapa.n_ent -= 1;
+                                }
+                                else
+                                {
+                                    nada += 0;
+                                }
                                 celda.bitmons_celda.RemoveAt(1);
                             }
                             else
@@ -479,12 +531,96 @@ namespace E3
                                 nada += 0;
                             }
                         }
-                        if (mapa.mapa[fila, columna].bitmons_celda.Count > 1 && mapa.mapa[fila, columna].bitmons_celda.Count < 2)
+                        else if (mapa.mapa[fila, columna].bitmons_celda.Count > 1 && mapa.mapa[fila, columna].bitmons_celda.Count < 2)
                         {
+                            if (celda.bitmons_celda[0].Get_Especie() == "taplan")
+                            {
+                                mapa.n_taplan -= 1;
+                            }
+                            else if (celda.bitmons_celda[0].Get_Especie() == "wetar")
+                            {
+                                mapa.n_wetar -= 1;
+                            }
+                            else if (celda.bitmons_celda[0].Get_Especie() == "gofue")
+                            {
+                                mapa.n_gofue -= 1;
+                            }
+                            else if (celda.bitmons_celda[0].Get_Especie() == "dorvalo")
+                            {
+                                mapa.n_dorvalo -= 1;
+                            }
+                            else if (celda.bitmons_celda[0].Get_Especie() == "doti")
+                            {
+                                mapa.n_doti -= 1;
+                            }
+                            else if (celda.bitmons_celda[0].Get_Especie() == "ent")
+                            {
+                                mapa.n_ent -= 1;
+                            }
+                            else
+                            {
+                                nada += 0;
+                            }
                             mapa.mapa[fila, columna].bitmons_celda.RemoveAt(0);
                         }
-                        if (mapa.mapa[fila, columna].bitmons_celda.Count > 2)
+                        else if (mapa.mapa[fila, columna].bitmons_celda.Count > 2)
                         {
+                            if (celda.bitmons_celda[0].Get_Especie() == "taplan")
+                            {
+                                mapa.n_taplan -= 1;
+                            }
+                            else if (celda.bitmons_celda[0].Get_Especie() == "wetar")
+                            {
+                                mapa.n_wetar -= 1;
+                            }
+                            else if (celda.bitmons_celda[0].Get_Especie() == "gofue")
+                            {
+                                mapa.n_gofue -= 1;
+                            }
+                            else if (celda.bitmons_celda[0].Get_Especie() == "dorvalo")
+                            {
+                                mapa.n_dorvalo -= 1;
+                            }
+                            else if (celda.bitmons_celda[0].Get_Especie() == "doti")
+                            {
+                                mapa.n_doti -= 1;
+                            }
+                            else if (celda.bitmons_celda[0].Get_Especie() == "ent")
+                            {
+                                mapa.n_ent -= 1;
+                            }
+                            else
+                            {
+                                nada += 0;
+                            }
+                            if (celda.bitmons_celda[1].Get_Especie() == "taplan")
+                            {
+                                mapa.n_taplan -= 1;
+                            }
+                            else if (celda.bitmons_celda[1].Get_Especie() == "wetar")
+                            {
+                                mapa.n_wetar -= 1;
+                            }
+                            else if (celda.bitmons_celda[1].Get_Especie() == "gofue")
+                            {
+                                mapa.n_gofue -= 1;
+                            }
+                            else if (celda.bitmons_celda[1].Get_Especie() == "dorvalo")
+                            {
+                                mapa.n_dorvalo -= 1;
+                            }
+                            else if (celda.bitmons_celda[1].Get_Especie() == "doti")
+                            {
+                                mapa.n_doti -= 1;
+                            }
+                            else if (celda.bitmons_celda[1].Get_Especie() == "ent")
+                            {
+                                mapa.n_ent -= 1;
+                            }
+                            else
+                            {
+                                nada += 0;
+                            }
                             mapa.mapa[fila, columna].bitmons_celda.RemoveAt(0);
                             mapa.mapa[fila, columna].bitmons_celda.RemoveAt(1);
                             mapa.CrearBitmon();
@@ -498,18 +634,9 @@ namespace E3
                         ///
                         //
 
-
-                        else if (mapa.mapa[fila, columna].bitmons_celda.Count > 1)
+                        else
                         {
-                            if ((mapa.mapa[fila, columna].bitmons_celda[0].Get_Especie() == "wetar" && mapa.mapa[fila, columna].bitmons_celda[1].Get_Especie() == "dorvalo") || (mapa.mapa[fila, columna].bitmons_celda[0].Get_Especie() == "dorvalo" && mapa.mapa[fila, columna].bitmons_celda[1].Get_Especie() == "wetar"))
-                            {
-                                matrizBotones[fila, columna].BackgroundImage = Properties.Resources.pelea;//foto_pelea;
-                                matrizBotones[fila, columna].BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-                                //matrizBotones[fila, columna].Text = "BUM";
-                                mapa.mapa[fila, columna].bitmons_celda.RemoveAt(0);
-                                matrizBotones[fila, columna].BackgroundImage = null;
-
-                            }
+                            nada += 0;
                         }
                     }
                 }
@@ -521,6 +648,16 @@ namespace E3
 
 
             }
+            cant_wetar.Text = Convert.ToString(mapa.n_wetar);
+            cant_gofue.Text = Convert.ToString(mapa.n_gofue);
+            cant_dorvalo.Text = Convert.ToString(mapa.n_dorvalo);
+            cant_doti.Text = Convert.ToString(mapa.n_doti);
+            cant_ent.Text = Convert.ToString(mapa.n_ent);
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
