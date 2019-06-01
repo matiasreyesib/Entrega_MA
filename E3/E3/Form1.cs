@@ -42,6 +42,13 @@ namespace E3
 
                     Celda celda = mapa.mapa[fila, columna];
                     Terreno terreno = celda.tipo_terreno;
+                    cant_taplan.Text = Convert.ToString(mapa.n_taplan);
+
+                    cant_wetar.Text = Convert.ToString(mapa.n_wetar);
+                    cant_gofue.Text = Convert.ToString(mapa.n_gofue);
+                    cant_dorvalo.Text = Convert.ToString(mapa.n_dorvalo);
+                    cant_doti.Text = Convert.ToString(mapa.n_doti);
+                    cant_ent.Text = Convert.ToString(mapa.n_ent);
 
                     // Terrenos en el mapa
                     if (terreno.Get_Terreno() == "acuatico")

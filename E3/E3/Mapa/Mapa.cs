@@ -81,12 +81,14 @@ namespace E3
                     Dorvalo bitmon = new Dorvalo(fila, columna, tiempoDeVida);
                     mapa[fila, columna].AgregarBitmon(bitmon);
                     contador +=1;
+                    n_dorvalo += 1;
                 }
                 else if (al_bit == 2)
                 {
                     Doti bitmon = new Doti(fila, columna, tiempoDeVida);
                     mapa[fila, columna].AgregarBitmon(bitmon);
                     contador += 1;
+                    n_doti += 1;
                 }
                 else if (al_bit == 3)
                 {
@@ -122,12 +124,14 @@ namespace E3
                     Gofue bitmon = new Gofue(fila, columna, tiempoDeVida);
                     mapa[fila, columna].AgregarBitmon(bitmon);
                     contador += 1;
+                    n_gofue += 1;
                 }
                 else if (al_bit == 5)
                 {
                     Taplan bitmon = new Taplan(fila, columna, tiempoDeVida);
                     mapa[fila, columna].AgregarBitmon(bitmon);
                     contador += 1;
+                    n_taplan += 1;
                 }
                 else
                 {
